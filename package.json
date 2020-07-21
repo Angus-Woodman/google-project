@@ -2,20 +2,34 @@
   "name": "google-project",
   "version": "1.0.0",
   "description": "",
+<<<<<<< HEAD
   "main": "client.js",
+=======
+  "main": "index.js",
+>>>>>>> a2e8d8dfb96021c9357cf0dd0d0401424ef613b0
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
+<<<<<<< HEAD
     "url": "git+https://github.com/Angus-Woodman/google-project.git"
+=======
+    "url": "git+https://github.com/AnnaTran96/google-project.git"
+>>>>>>> a2e8d8dfb96021c9357cf0dd0d0401424ef613b0
   },
   "author": "",
   "license": "ISC",
   "bugs": {
+<<<<<<< HEAD
     "url": "https://github.com/Angus-Woodman/google-project/issues"
   },
   "homepage": "https://github.com/Angus-Woodman/google-project#readme",
+=======
+    "url": "https://github.com/AnnaTran96/google-project/issues"
+  },
+  "homepage": "https://github.com/AnnaTran96/google-project#readme",
+>>>>>>> a2e8d8dfb96021c9357cf0dd0d0401424ef613b0
   "dependencies": {
     "axios": "^0.19.2"
   }
