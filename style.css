@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo, #my-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    position: relative;
+    top: 16rem;
+}
+
+.right-nav {
+    position: absolute;
+    right:0;
+}
