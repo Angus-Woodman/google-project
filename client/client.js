@@ -10,6 +10,7 @@ function getRequest(e) {
     let search = e.target.searchBar.value;
     let res = fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyBARGZeFhbu-VGkHidrPQVe8UxPwHSXIY0&cx=007675054066069573056:uzm9atbkkps&q=${search}&num=10`)
         .then(r => r.json())
+        // .then(hideNavBar)
         .then(displayResults)
         .catch(console.warn)
 }
