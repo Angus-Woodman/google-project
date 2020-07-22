@@ -26,7 +26,7 @@ function displayResults(search) {
     titl.append(titles);
     lnk.setAttribute("href", links);
     snip.append(snippits);
-    img.append(image);
+    img.setAttribute("src", image);
   };
 
 
