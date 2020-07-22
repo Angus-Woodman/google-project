@@ -19,16 +19,16 @@ function displayResults(search) {
         let titles = search.items[i].title;
         let links = search.items[i].link;
         let snippits = search.items[i].snippet;
-        // let image = search.items[i].pagemap.cse_image[0].src;
+        let image = search.items[i].pagemap.cse_image[0].src;
         results.innerHTML += `<section> <a id=\"link${i}\" href=\"#\"><h3 id=\"title${i}\"></h3></a><p id=\"snippit${i}\" ></p><img id=\"img${i}\"src=\"\" alt=\"\"> </section>`;
         const titl = document.querySelector(`#title${i}`)
         const lnk = document.querySelector(`#link${i}`)
         const snip = document.querySelector(`#snippit${i}`)
-        // const img = document.querySelector(`#img${i}`)
+        const img = document.querySelector(`#img${i}`)
         titl.append(titles);
         lnk.setAttribute("href", links);
         snip.append(snippits);
-        // img.setAttribute("src", image);
+        img.setAttribute("src", image);
     }
   };
 
