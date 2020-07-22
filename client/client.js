@@ -1,17 +1,32 @@
 const form = document.querySelector('#my-form');
-form.addEventListener('submit', getRequest)
+const results = document.querySelector('#results')
+form.addEventListener('submit', getRequest);
 
-async function getRequest(e) {
+function getRequest(e) {
     
     e.preventDefault();
     let search = e.target.searchBar.value;
 
-    const config = {
-        method: 'GET',
-        url: `https://www.googleapis.com/customsearch/v1?key=AIzaSyCXjUAD4K9aY1FkMPWZkLx2uXEQuoDFVn0&cx=007675054066069573056:uzm9atbkkps&q=${search}&num=10`
-    }
-
-    console.log(res.data)
+    let res = fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyCXjUAD4K9aY1FkMPWZkLx2uXEQuoDFVn0&cx=007675054066069573056:uzm9atbkkps&q=${search}&num=10`)
+        .then(r => r.json())
+        // .then(console.log(res.data))
+        .then(displayResults)
+        .catch(console.warn)
+        
+    // console.log(res.data)
 }
 
-getRequest();
+
+function displayResults(search) {  
+    console.log(typeof search)
+    results.append(JSON.stringify(search))
+    }
+};
+
+    // Object.keys(search).forEach(function (key) {
+    //     var val = search[key];
+
+ // for(var key in search) {
+    //     var value = search[key]
+    // }
+    // var x = search[Object.keys(search).filter(item => search[item].kind)];]

@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <title>Google Project</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="server/server.js"></script>
+    <script defer src="api/api.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
   </head>
   <body>
     <section>
@@ -27,7 +29,10 @@
       <input type="text" id="searchBar">
       <input type="submit">
     </form>
-
+    <section>
+      <div id="results"></div>
+    </section>
+    <script src="client/client.js"></script>
   </body>
 </html>
 
