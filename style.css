@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 .logo, #my-form {
@@ -9,10 +10,30 @@ body {
     align-items: center;
     margin: 50px 0;
     position: relative;
-    top: 16rem;
+    top: 15rem;
+}
+
+.left-nav, .right-nav {
+    position: absolute;
+    top: 30px;
+}
+
+.left-nav {
+    left: 10px;
 }
 
 .right-nav {
-    position: absolute;
-    right:0;
+    right: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+#results {
+    position: relative;
+    top: 20rem;
 }
