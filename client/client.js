@@ -1,9 +1,14 @@
 const form = document.querySelector('#my-form');
 const results = document.querySelector('#results')
+const titl = document.querySelector('#firstTitlePage')
+const lnk = document.querySelector('#firstLinkPage')
+const snip = document.querySelector('#firstSnippitPage')
+const img = document.querySelector('#firstImage')
+
 form.addEventListener('submit', getRequest);
 
 function getRequest(e) {
-  
+
     e.preventDefault();
     let search = e.target.searchBar.value;
 
@@ -13,27 +18,28 @@ function getRequest(e) {
         .catch(console.warn)
 }
 
-
-// function displayResults(search) {
-//     let links = search.items[0].link;
-//     let titles = search.items[0].title;
-//     let snippits = search.items[0].snippet;
-//     let image = search.items[0].pagemap.cse_image[0].src;;
-//     console.log(links);
-//     console.log(titles);
-//     console.log(snippits);
-//     console.log(image);
-//   };
-  function displayResults(search) {
-      let a = document.createElement('a')
-      let link = document.createTextNode(search.items[1].link);
-      a.appendChild(link);
-      a.title = search.items[0].title;
-      a.href = search.items[0].link
-      let outcome = document.body.appendChild(a);
-      outcome.textContent =  a.title;
-      results.append(outcome.textContent)
+function displayResults(search) {
+    let titles = search.items[0].title;
+    let links = search.items[0].link;
+    let snippits = search.items[0].snippet;
+    let image = search.items[0].pagemap.cse_image[0].src;;
+    titl.append(titles);
+    lnk.setAttribute("href", links);
+    snip.append(snippits);
+    img.append(image);
   };
+
+
+  // function displayResults(search) {
+  //     let a = document.createElement('a')
+  //     let link = document.createTextNode(search.items[1].link);
+  //     a.appendChild(link);
+  //     a.title = search.items[0].title;
+  //     a.href = search.items[0].link
+  //     let outcome = document.body.appendChild(a);
+  //     outcome.textContent =  a.title;
+  //     results.append(outcome.textContent)
+  // };
   // function hideNavBar() {
   //     let hide = document.querySelectorAll("nav");
   //     Array.from(hide).forEach(hidden => {
