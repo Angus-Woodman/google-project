@@ -13,14 +13,12 @@ function getRequest(e) {
     let res = fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyBARGZeFhbu-VGkHidrPQVe8UxPwHSXIY0&cx=007675054066069573056:uzm9atbkkps&q=${search}&num=10`)
         .then(r => r.json())
         .then(displayResults)
-        // .then(hideNavBar)
-        // .then(moveLogo)
         .catch(console.warn)
 }
 
 function displayResults(search) {
     for (let i = 0; i <=9; i++) {
-        results.innerHTML += `<section class="card"> <div class="cardText"> <a id=\"link${i}\" href=\"#\"><h3 id=\"title${i}\"></h3></a><p id=\"snippit${i}\" ></p> </div> <div> <img class="cardImage" id=\"img${i}\" src=\"\" alt=\"\"> </div></section>`;
+        results.innerHTML += `<section class="card"> <div class="cardText"> <a id="link${i}" href="#"><h3 id="title${i}"></h3></a><p id="snippit${i}" ></p> </div> <div> <img class="cardImage" id="img${i}" src="" alt=""> </div></section>`;
         let titles = search.items[i].title;
         let links = search.items[i].link;
         let snippits = search.items[i].snippet;
