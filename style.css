@@ -3,7 +3,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
 }
-.logo, #my-form {
+
+#logo, #my-form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,37 +12,37 @@ body {
     position: relative;
     top: 15rem;
 }
-.logo img{
+
+#logo img{
     margin-left: -3rem;;
 }
-.left-nav, .right-nav {
+
+#left-nav, #right-nav {
     position: absolute;
     top: 30px;
 }
-.left-nav {
+
+#left-nav {
     left: 10px;
 }
-.right-nav {
+
+#right-nav {
     right: 10px;
 }
+
 a {
     text-decoration: none;
     color: black;
     padding: 0 10px;
     font-size: 16px;
 }
-.results {
+
+#results {
+    display: flex;
+    flex-direction: column;
     position: relative;
     width: 95%;
     top: 20rem;
     left: 2.5rem;
     text-align: center;
-}
-#submit {
-    position: relative;
-    top: 3rem;
-    left: -6.5rem;
-}
-.card {
-    margin-top: 200px;
-}
+} 
