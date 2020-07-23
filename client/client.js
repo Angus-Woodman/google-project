@@ -1,18 +1,20 @@
 const form = document.querySelector('#my-form');
 const results = document.querySelector('#results')
 
-
-form.addEventListener('submit', getRequest);
+form.addEventListener('submit', (e) => {
+  getRequest(e)
+  hideNavBar()
+  moveLogo()
+});
 
 function getRequest(e) {
-
     e.preventDefault();
     let search = e.target.searchBar.value;
     let res = fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyBARGZeFhbu-VGkHidrPQVe8UxPwHSXIY0&cx=007675054066069573056:uzm9atbkkps&q=${search}&num=10`)
         .then(r => r.json())
         .then(displayResults)
-        .then(hideNavBar)
-        .then(moveLogo)
+        // .then(hideNavBar)
+        // .then(moveLogo)
         .catch(console.warn)
 }
 
