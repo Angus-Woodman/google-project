@@ -42,7 +42,6 @@ a {
     flex-direction: column;
     position: relative;
     width: 95%;
-    top: 20rem;
-    left: 2.5rem;
-    text-align: center;
-} 
+    margin: auto;
+    top: 200px;
+}
