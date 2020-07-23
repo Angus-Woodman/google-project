@@ -20,17 +20,17 @@ function getRequest(e) {
 
 function displayResults(search) {
     for (let i = 0; i <=9; i++) {
-        results.innerHTML += `<section class="card"> <a class="card-header" id=\"link${i}\" href=\"#\"><h3 id=\"title${i}\"></h3></a><p id=\"snippit${i}\" ></p><img id=\"img${i}\"src=\"\" alt=\"\"> </section>`;
+        results.innerHTML += `<section class="card"> <div class="cardText"> <a id=\"link${i}\" href=\"#\"><h3 id=\"title${i}\"></h3></a><p id=\"snippit${i}\" ></p> </div> <div> <img class="cardImage" id=\"img${i}\" src=\"\" alt=\"\"> </div></section>`;
         let titles = search.items[i].title;
         let links = search.items[i].link;
         let snippits = search.items[i].snippet;
-        // if (!!search.items[i].pagemap.cse_image){
-        //   let image = search.items[i].pagemap.cse_image[0].src;
-        //   const img = document.querySelector(`#img${i}`)
-        //   img.setAttribute("src", image);
-        // } else {
-        //   console.log(`no photo for index ${i}`)
-        // }
+        if (!!search.items[i].pagemap.cse_image){
+          let image = search.items[i].pagemap.cse_image[0].src;
+          const img = document.querySelector(`#img${i}`)
+          img.setAttribute("src", image);
+        } else {
+          console.log(`no photo for index ${i}`)
+        }
 
         const titl = document.querySelector(`#title${i}`)
         const lnk = document.querySelector(`#link${i}`)
