@@ -28,7 +28,7 @@ function displayResults(search) {
 
   // inserts html content to add specific information from the google API object
     for (let i = 0; i <=9; i++) {
-        results.innerHTML += `<section class="card"> <div class="cardText"> <a id="link${i}" href="#"><h3 id="title${i}"></h3></a><p id="snippit${i}" ></p> </div> <div> <img class="cardImage" id="img${i}" src="" alt=""> </div></section>`;
+        results.innerHTML += `<section class="card"> <div class="cardText"> <a id="link${i}" href="#"><h3 id="title${i}"></h3></a><p id="snippit${i}" ></p> </div> <div class="imageContainer"> <img class="cardImage" id="img${i}" src="" alt=""> </div></section>`;
         let titles = search.items[i].title;
         const titl = document.querySelector(`#title${i}`);
         titl.append(titles);

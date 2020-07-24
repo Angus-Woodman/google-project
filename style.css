@@ -49,12 +49,17 @@ a {
     display:flex;
     flex-direction:row;
     margin-bottom: 10px;
+    justify-content: space-between;
 }
 .cardText{
   margin-left: 10px;
 }
 
+.imageContainer {
+  margin-left:10px;
+
+}
+
 .cardImage {
     width:200px;
-    margin-right:0;
 }
